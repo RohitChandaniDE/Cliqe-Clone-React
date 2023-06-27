@@ -1,0 +1,37 @@
+.multicolortext {
+        background-image: linear-gradient(to left, #1919BC 30%, #06D5F7 55%);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+.bgc {
+    background-image: linear-gradient(to left, #E6EAFF 30%, #E6F7FE 55%);
+        /* -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent; */
+}
+
+    /* .arrow-button {
+        position: relative;
+        padding: 10px 20px ;
+        background-color: #eee;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      
+     .arrow-icon {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        transition: transform 0.3s ease;
+      }
+      
+      .arrow-button.hovered .arrow-icon {
+        transform: translate(10px, -50%);
+      } */
+      

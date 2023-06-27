@@ -1,0 +1,7 @@
+.bgcblog {
+    background-image: linear-gradient(to left, #E6F7FE 30%, #D1D3F3 55%);
+        /* -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent; */
+}

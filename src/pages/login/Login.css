@@ -1,0 +1,7 @@
+.multicolorbackground {
+    background-image: linear-gradient(to left, #6D9DEC 30%, #A9D9FF 55%);
+    /* -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent; */
+}
