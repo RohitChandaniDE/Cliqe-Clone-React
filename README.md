@@ -17,7 +17,7 @@
 
 ![Badge](https://img.shields.io/badge/PROJECT-LINK-orange)
 
-### [HERE](https://cliqe-clone-not-git.netlify.app/)
+### [HERE](https://cliqe-clone-react.vercel.app/)
 
 ***
 
