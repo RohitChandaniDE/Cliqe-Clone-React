@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom'
 import React from 'react'
+import { Link } from 'react-router-dom'
 import "./Navbar.css"
 
 
@@ -30,9 +30,9 @@ const Navbar = () => {
     </a>
 
     <div className="hamburger inline-block cursor-pointer p-1 pt-7 sm:hidden">
-        <div className="line h-0.5 w-6 my-1 bg-black"></div>
-        <div className="line h-0.5 w-6 my-1 bg-black"></div>
-        <div className="line h-0.5 w-6 my-1 bg-black"></div>
+        <div className="line h-0.5 w-6 my-1 bg-[#1919BC]"></div>
+        <div className="line h-0.5 w-6 my-1 bg-[#1919BC]"></div>
+        <div className="line h-0.5 w-6 my-1 bg-[#1919BC]"></div>
       </div>
     <div>
     <a href="/signup">
