@@ -60,14 +60,14 @@ const Signup = () => {
 <h1 className='text-[14px] pt-3 cursor-pointer font-bold text-black pl-[65px] pb-1'>Confirmation code</h1>
 </div>
 <input className='pt-[2.5px] ml-[65px] w-[371px] rounded-md pb-[1px] hover:bg-[#EFF6FF] border border-gray-400 pl-2 mb-1' type="number" name="number" id="number" />
-<h1 className='text-[14px] pt-3 cursor-pointer font-bold text-black pl-[65px] pb-4'>Referral Code ></h1>
+<h1 className='text-[14px] pt-3 cursor-pointer font-bold text-black pl-[65px] pb-4'>Referral Code</h1>
 <button className="btnn px-2 pt-[10px] pb-[7px] ml-[65px] w-[371px] rounded-md text-white text-[15px] bg-gray-400 mb-5">Get started</button> 
 <p className='cursor-pointer text-gray-500 text-[10.1px] pl-[65px]' >By clicking Get Started you agree to Cliqe's Terms and Conditions and confirm you <br /> have read our Privacy Notice.</p>  
 
 </main>
 
    <main>
-   <img src="https://cliqe.bio/_next/image?url=%2Flogin-bg.png&w=1920&q=75"/>
+   {/* <img src="https://cliqe.bio/_next/image?url=%2Flogin-bg.png&w=1920&q=75"/> */}
    </main>
 
     </section>

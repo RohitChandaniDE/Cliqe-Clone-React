@@ -72,7 +72,7 @@ const Login = () => {
     </main>
 
     <main>
-     <img src="https://cliqe.bio/_next/image?url=%2Flogin-bg.png&w=1920&q=75"/>
+     {/* <img src="https://cliqe.bio/_next/image?url=%2Flogin-bg.png&w=1920&q=75"/> */}
     </main>
      </section>
 
