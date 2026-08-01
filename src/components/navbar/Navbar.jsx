@@ -1,50 +1,105 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
 import "./Navbar.css"
 
+const links = [
+  { label: 'Features',   href: '/features' },
+  { label: 'Pricing',    href: '/pricing'  },
+  { label: 'Für Brands', href: '/brands'   },
+  { label: 'Über uns',   href: '#'         },
+  { label: 'Blog',       href: '/blog-de'  },
+]
 
 const Navbar = () => {
-  return (
-    <div className='container mx-auto pb-4 sticky top-0 z-50 bg-white'>
- <section>
-  <nav className="flex justify-center sm:gap-[25px] gap-[150px] pt-2 cursor-pointer">
-    <a href="/">
-    <div className="logo flex mr-[200px]">
-      <img className="xl:w-40 xl:h-10 w-28 mt-3.5 sm:pt-0" src="https://uploads-ssl.webflow.com/638a2cc04cd844a36eb3c00a/63a1e1ceb4ace16396c01065_cliqe%20logo-p-500.png" alt="logo" />
-    </div>
-    </a>
-    
-    <div className="hidden sm:flex font-sans text-xl font-medium gap-10 2xl:mr-[100px] xl:mr-[250px] lg:mr-[100px] mr-[70px]">
-      <a href="/features"><li className="hover:text-[#0508A6] list-none xl:text-l lg:text-base text-xs pt-5">Features</li></a>
-      {/* <Link to="/features"><li className="hover:text-[#0508A6] list-none xl:text-l lg:text-base text-xs pt-5">Features</li></Link> */}
-      <a href="/pricing"><li className="hover:text-[#0508A6] list-none xl:text-l lg:text-base text-xs pt-5">Pricing</li></a>
-      <a href="/brands"><li className="hover:text-[#0508A6] list-none xl:text-l lg:text-base text-xs pt-5">Für Brands</li></a>
-      <li className="hover:text-[#0508A6] list-none xl:text-l lg:text-base text-xs pt-5">Über uns</li>
-      <a href="/blog-de"><li className="hover:text-[#0508A6] list-none xl:text-l lg:text-base text-xs pt-5">Blog</li></a>
-    </div>
-    {/* <Link className="hidden sm:flex font-sans text-xl font-medium" to="/login">
-      <li className="text-[#0508A6] list-none xl:text-l lg:text-base text-xs pt-5">Login</li>
-    </Link> */}
-    <a className="hidden sm:flex font-sans text-xl font-medium" href="/login">
-      <li className="text-[#0508A6] list-none xl:text-l lg:text-base text-xs pt-5">Login</li>
-    </a>
+  const [open, setOpen] = useState(false)
 
-    <div className="hamburger inline-block cursor-pointer p-1 pt-7 sm:hidden">
-        <div className="line h-0.5 w-6 my-1 bg-[#1919BC]"></div>
-        <div className="line h-0.5 w-6 my-1 bg-[#1919BC]"></div>
-        <div className="line h-0.5 w-6 my-1 bg-[#1919BC]"></div>
+  return (
+    <header className='w-full sticky top-0 z-50 bg-white'>
+
+      <div className='max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-12'>
+        <nav className='flex items-center justify-between h-16 lg:h-20'>
+
+          <a href="/" className='flex-shrink-0'>
+            <img
+              className='w-28 lg:w-36 h-auto'
+              src="https://uploads-ssl.webflow.com/638a2cc04cd844a36eb3c00a/63a1e1ceb4ace16396c01065_cliqe%20logo-p-500.png"
+              alt="cliqe"
+            />
+          </a>
+
+          {/* desktop links — lg: not sm:, they need ~1024px to fit */}
+          <ul className='hidden lg:flex items-center gap-7 xl:gap-10 font-sans font-medium'>
+            {links.map(l => (
+              <li key={l.label}>
+                <a href={l.href} className='text-base hover:text-[#0508A6] duration-150'>
+                  {l.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          <div className='hidden lg:flex items-center gap-5 xl:gap-7'>
+            <a href="/login" className='text-[#0508A6] font-medium text-base hover:opacity-70 duration-150'>
+              Login
+            </a>
+            <a href="/signup">
+              <button
+                className="text-white font-bold px-5 xl:px-7 py-2.5 bg-[#1919BC] text-base
+                           rounded-xl shadow-lg hover:opacity-80 duration-150
+                           focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1919BC]"
+                type="button">
+                Registrieren
+              </button>
+            </a>
+          </div>
+
+          {/* hamburger — now actually wired up, and animates to an X */}
+          <button
+            onClick={() => setOpen(!open)}
+            aria-label='Menü öffnen'
+            aria-expanded={open}
+            className='lg:hidden p-2 focus:outline-none focus:ring-2 focus:ring-[#1919BC] rounded'
+            type='button'>
+            <span className={`block h-0.5 w-6 bg-[#1919BC] duration-300 ${open ? 'translate-y-2 rotate-45' : ''}`}></span>
+            <span className={`block h-0.5 w-6 bg-[#1919BC] my-1.5 duration-300 ${open ? 'opacity-0' : ''}`}></span>
+            <span className={`block h-0.5 w-6 bg-[#1919BC] duration-300 ${open ? '-translate-y-2 -rotate-45' : ''}`}></span>
+          </button>
+
+        </nav>
       </div>
-    <div>
-    <a href="/signup">
-      <button className="text-white font-bold mt-[10px] 2xl:px-7 lg:px-5 px-3 2xl:py-3 lg:py-2 bg-[#1919BC] 2xl:text-base lg:text-base text-sm rounded-[12px] text-center sm:ml-2
-          hover:opacity-80 shadow-lg duration-150" type="button">Registrieren</button>
-    </a>
-    </div>
-    
-      
-  </nav>
-</section>
-    </div>
+
+      {/* mobile drawer — max-height so it slides instead of popping */}
+      <div className={`lg:hidden overflow-hidden bg-white border-t border-gray-100
+                       transition-[max-height] duration-300 ease-in-out
+                       ${open ? 'max-h-96' : 'max-h-0'}`}>
+        <ul className='px-4 sm:px-6 py-5 flex flex-col gap-4'>
+          {links.map(l => (
+            <li key={l.label}>
+              <a href={l.href}
+                 onClick={() => setOpen(false)}
+                 className='block text-base font-medium hover:text-[#0508A6]'>
+                {l.label}
+              </a>
+            </li>
+          ))}
+          <li>
+            <a href="/login" onClick={() => setOpen(false)}
+               className='block text-base font-medium text-[#0508A6]'>
+              Login
+            </a>
+          </li>
+          <li>
+            <a href="/signup" onClick={() => setOpen(false)}>
+              <button className="w-full text-white font-bold px-5 py-3 bg-[#1919BC]
+                                 text-base rounded-xl shadow-lg hover:opacity-80 duration-150"
+                      type="button">
+                Registrieren
+              </button>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </header>
   )
 }
 

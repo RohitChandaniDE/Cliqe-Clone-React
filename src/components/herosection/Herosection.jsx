@@ -30,32 +30,74 @@ import "./Herosection.css"
 
 const Herosection = () => {
   return (
-    <div className='container mx-auto bgc h-[700px] flex justify-center items-center gap-20' >
-     
-     <section className='mt-[-50px]' >
-     <div className='bg-[#DFE8FE] w-[108px] h-10 rounded-[100px] mb-6' >
-      <h6 className="text-[#6163B1] lg:text-[16px] text-2xl pt-1 pl-4 text-center sm:text-justify cursor-pointer">#LinkinBio</h6>
+    <div className='w-full bgc'>
+
+      <div className='max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-12
+                      py-14 lg:py-20 lg:min-h-[700px]
+                      flex flex-col lg:flex-row items-center justify-center
+                      gap-10 lg:gap-12 xl:gap-20'>
+
+        {/* ---------- LEFT section ---------- */}
+        <section className='w-full lg:w-1/2 max-w-xl text-center lg:text-left'>
+
+          <div className='inline-flex items-center bg-[#DFE8FE] rounded-full px-4 py-1.5 mb-5'>
+            <span className="text-[#6163B1] text-sm sm:text-base">#LinkinBio</span>
+          </div>
+
+          <h1 className="text-black font-bold leading-tight pb-5
+                         text-3xl sm:text-4xl xl:text-5xl">
+            Profitiere mit deinem <br className='hidden lg:inline' />
+            <span className='multicolortext'>Bio-Link</span> von deiner <br className='hidden lg:inline' />
+            <span className='multicolortext'>Leidenschaft</span>
+          </h1>
+
+          <h3 className='text-black font-bold leading-relaxed pb-7
+                         text-base sm:text-lg xl:text-xl'>
+            Die All-in-One Bio-Seite mit Zugang zu über 250 <br className='hidden lg:inline' />
+            Marken, um deine Reichweite zu monetarisieren.
+          </h3>
+
+          <div className="flex flex-col sm:flex-row gap-3 mb-3 max-w-md mx-auto lg:mx-0">
+            <input
+              type="text"
+              aria-label="username"
+              placeholder="username"
+              className="flex-1 min-w-0 px-4 py-3 text-base text-gray-500 bg-white
+                         rounded-xl border border-gray-200 hover:border-black
+                         focus:outline-none focus:ring-2 focus:ring-[#1919BC]"
+            />
+            <button
+              className="text-white font-bold px-7 py-3 bg-[#1919BC] text-base
+                         rounded-xl shadow-lg hover:opacity-80 duration-150
+                         whitespace-nowrap
+                         focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1919BC]"
+              type="button">
+              sichern
+            </button>
+          </div>
+
+          <div className='flex items-center justify-center lg:justify-start gap-2'>
+            <p className='text-gray-600 text-sm sm:text-base'>
+              In wenigen Minuten kostenlos starten
+            </p>
+            <span className='bg-[#E9D4FF] text-[#6163B1] text-xs rounded-full px-3 py-1'>
+              beta
+            </span>
+          </div>
+
+        </section>
+
+        {/* ---------- RIGHT section: hero image ---------- */}
+        <section className='w-full lg:w-1/2 flex justify-center'>
+          <img
+            className='w-full max-w-[600px] h-auto'
+            src="https://uploads-ssl.webflow.com/638a2cc04cd844a36eb3c00a/644be847e0ef567adc062e3b_Hero%20Graphic%20v3-p-800.png"
+            alt="cliqe Bio-Seiten auf Smartphones, umgeben von Partnermarken"
+          />
+        </section>
+
       </div>
-      <h1 className="text-black font-bold 2xl:text-5xl xl:text-5xl lg:text-3xl text-2xl text-center sm:text-justify pb-6">Profitiere mit deinem <br /><span className='pr-3 multicolortext' >Bio-Link</span>von deiner <br /><span className='multicolortext' >Leidenschaft</span></h1>
-      <h3 className=' text-black text-xl leading-7 font-bold pb-8' >Die All-in-One Bio-Seite mit Zugang zu über 250 <br />Marken, um deine Reichweite zu monetarisieren.</h3>
-      <div class="flex mb-6 sm:mb-4">
-          <input type="text" placeholder="username" class="pl-3 2xl:pr-22 lg:pr-24 pr-12 2xl:py-3 py-2 2xl:text-xl lg:text-base text-sm
-          text-gray-400 bg-white rounded-xl hover:border border border-gray-200 mr-6 hover:border-black" />
-         <button class="text-white font-bold 2xl:px-7 lg:px-5 px-3 2xl:py-3 lg:py-2 bg-[#1919BC] 2xl:text-xl lg:text-base text-sm rounded-xl text-center sm:-ml-4
-          hover:opacity-80 shadow-lg duration-150" type="button">sichern</button>
-        </div>
-        <p className='text-gray-600 text-base pl-5' >In wenigen Minuten kostenlos starten</p>
-        <div className='bg-[#E9D4FF] w-[55px] h-6 rounded-[50px] ml-[295px] mt-[-25px]' ></div>
-        <h6 className="text-[#6163B1] lg:text-[12px] text-2xl pl-[310px] mt-[-30px] text-center sm:text-justify cursor-pointer">beta</h6>
-      </section>
-
-     <section className='mt-[-50px]'>
-     <img className='w-[600px]' src="https://uploads-ssl.webflow.com/638a2cc04cd844a36eb3c00a/644be847e0ef567adc062e3b_Hero%20Graphic%20v3-p-800.png" />
-     </section>
-
     </div>
-
-  
   )
 }
 

@@ -13,7 +13,7 @@ import Footer from '../../components/footer/Footer'
 
 
 const Home = () => {
-  return (
+  return ( 
     <div>
     <Navbar />
     <Herosection />
