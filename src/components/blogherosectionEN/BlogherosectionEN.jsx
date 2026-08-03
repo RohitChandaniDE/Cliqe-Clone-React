@@ -1,27 +1,42 @@
 import React from 'react'
+import "../blogherosectionDE/blog.css"
 
 const BlogherosectionEN = () => {
   return (
-    <div className='container mx-auto' >
+    <div className='w-full bgcblog overflow-hidden'>
 
-     {/* Einblicke section */}
-      <section className='h-[300px] bgcblog font-bold ' >
-      <h3 className='text-center text-[#1919BC] pt-10 pb-2' >cliqe Blog</h3>
-      <h1 className='text-black font-bold text-center text-5xl pb-4' >Insights & Reflections</h1>
-      <p className='text-center text-gray-500 leading-5 text-[16px] font-medium pb-4' >Discover about various content creator topics including industry insights,<br />trends, best practices, our product and more!</p>
+      <section className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 font-bold'>
 
-      <a href="/blog-de">
-      <button className="text-gray-500 font-bold mt-[10px] 2xl:px-5 lg:px-5 px-3 2xl:py-2 lg:py-2 bg-[#F5F5F5]  2xl:text-sm lg:text-base 
-        text-sm rounded-[12px] text-center sm:ml-[680px]" type="button">German</button>
-      </a>
-        
-        <button className="text-white font-bold mt-[10px] 2xl:px-5 lg:px-5 px-3 2xl:py-2 lg:py-2 bg-[#06D5F7] 2xl:text-sm lg:text-base text-sm rounded-[12px] text-center sm:ml-3" type="button">English</button>
-        
+        <img className='hidden lg:block absolute left-8 xl:left-12 top-1/2 -translate-y-1/2 w-20 pointer-events-none'
+             src="https://uploads-ssl.webflow.com/638a2cc04cd844a36eb3c00a/6407293e81d444761346ee96_10-p-500.png"
+             alt="" aria-hidden="true" />
+        <img className='hidden lg:block absolute right-8 xl:right-12 top-1/2 translate-y-4 w-20 pointer-events-none'
+             src="https://uploads-ssl.webflow.com/638a2cc04cd844a36eb3c00a/640729049c07e6aa9aecb03b_12-p-500.png"
+             alt="" aria-hidden="true" />
 
-       <img className='w-20 ml-[50px] mt-[-200px]' src="https://uploads-ssl.webflow.com/638a2cc04cd844a36eb3c00a/6407293e81d444761346ee96_10-p-500.png" />
-       <img className='w-20 float-right mr-[50px] mt-[40px]' src="https://uploads-ssl.webflow.com/638a2cc04cd844a36eb3c00a/640729049c07e6aa9aecb03b_12-p-500.png"/>
-       </section>
+        <div className='max-w-2xl mx-auto text-center'>
+          <h3 className='text-[#1919BC] pb-2'>cliqe Blog</h3>
+          <h1 className='text-black font-bold text-3xl sm:text-4xl lg:text-5xl pb-4'>
+            Insights &amp; Reflections
+          </h1>
+          <p className='text-gray-500 leading-5 text-[16px] font-medium pb-6'>
+            Discover about various content creator topics including industry insights,<br className='hidden lg:inline' />
+            trends, best practices, our product and more!
+          </p>
 
+          <div className='flex justify-center gap-3'>
+            <a href="/blog-de">
+              <button className="text-gray-500 font-bold px-5 py-2 bg-[#F5F5F5] text-sm rounded-[12px]" type="button">
+                German
+              </button>
+            </a>
+            <button className="text-white font-bold px-5 py-2 bg-[#06D5F7] text-sm rounded-[12px]" type="button">
+              English
+            </button>
+          </div>
+        </div>
+
+      </section>
     </div>
   )
 }
