@@ -30,7 +30,7 @@ const KostenlosPricing = () => {
     <div className='w-full bg-[#CDF7FD] relative overflow-hidden'>
 
       <div className='hidden lg:block pointer-events-none select-none' aria-hidden="true">
-        <img className='absolute left-[12%] top-[3%]' src="https://uploads-ssl.webflow.com/638a2cc04cd844a36eb3c00a/638a2cc14cd8445283b3c0d4_Disc%202.svg" alt="" />
+        <img className='absolute left-[12%]' src="https://uploads-ssl.webflow.com/638a2cc04cd844a36eb3c00a/638a2cc14cd8445283b3c0d4_Disc%202.svg" alt="" />
         <img className='absolute left-[10%] top-[14%]' src="https://uploads-ssl.webflow.com/638a2cc04cd844a36eb3c00a/638a2cc14cd84440d6b3c0d8_Disc%203.svg" alt="" />
         <img className='absolute right-[10%] top-[5%]' src="https://uploads-ssl.webflow.com/638a2cc04cd844a36eb3c00a/638a2cc14cd84423c2b3c0ce_Disc%201.svg" alt="" />
       </div>
